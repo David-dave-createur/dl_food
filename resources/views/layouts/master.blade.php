@@ -97,7 +97,17 @@
         <!--  END SIDEBAR  -->
 
         <!--  BEGIN CONTENT AREA  -->
-        @yield("contenu")
+        <div class="content-wrapper">
+
+
+            <div class="content">
+            <div class="container-fluid">
+               
+
+            </div>
+            </div>
+
+            </div>
         <!--  END CONTENT AREA  -->
 
     </div>
