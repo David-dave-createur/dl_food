@@ -28,6 +28,7 @@ class ComposerStaticInita65d34f3a8ea0796ee72a1bf459c0a59
         '801c31d8ed748cfa537fa45402288c95' => __DIR__ . '/..' . '/psy/psysh/src/functions.php',
         'e39a8b23c42d4e1452234d762b03835a' => __DIR__ . '/..' . '/ramsey/uuid/src/functions.php',
         '37a3dc5111fe8f707ab4c132ef1dbc62' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/functions_include.php',
+        'e23faeee409e941dc9b4c80386209c39' => __DIR__ . '/..' . '/laracasts/flash/src/Laracasts/Flash/functions.php',
         '265b4faa2b3a9766332744949e83bf97' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Collections/helpers.php',
         'c7a3c339e7e14b60e06a2d7fcce9476b' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Events/functions.php',
         'f0906e6318348a765ffb6eb24e0d0938' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Foundation/helpers.php',
@@ -87,6 +88,9 @@ class ComposerStaticInita65d34f3a8ea0796ee72a1bf459c0a59
             'Symfony\\Component\\ErrorHandler\\' => 31,
             'Symfony\\Component\\CssSelector\\' => 30,
             'Symfony\\Component\\Console\\' => 26,
+            'Spatie\\Newsletter\\' => 18,
+            'Spatie\\MailcoachSdk\\' => 20,
+            'Spatie\\LaravelPackageTools\\' => 27,
             'Spatie\\LaravelIgnition\\' => 23,
             'Spatie\\Ignition\\' => 16,
             'Spatie\\FlareClient\\' => 19,
@@ -319,6 +323,18 @@ class ComposerStaticInita65d34f3a8ea0796ee72a1bf459c0a59
         array (
             0 => __DIR__ . '/..' . '/symfony/console',
         ),
+        'Spatie\\Newsletter\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/spatie/laravel-newsletter/src',
+        ),
+        'Spatie\\MailcoachSdk\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/spatie/mailcoach-sdk-php/src',
+        ),
+        'Spatie\\LaravelPackageTools\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/spatie/laravel-package-tools/src',
+        ),
         'Spatie\\LaravelIgnition\\' => 
         array (
             0 => __DIR__ . '/..' . '/spatie/laravel-ignition/src',
@@ -539,6 +555,16 @@ class ComposerStaticInita65d34f3a8ea0796ee72a1bf459c0a59
         ),
     );
 
+    public static $prefixesPsr0 = array (
+        'L' => 
+        array (
+            'Laracasts\\Flash' => 
+            array (
+                0 => __DIR__ . '/..' . '/laracasts/flash/src',
+            ),
+        ),
+    );
+
     public static $classMap = array (
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
@@ -550,6 +576,7 @@ class ComposerStaticInita65d34f3a8ea0796ee72a1bf459c0a59
         'App\\Http\\Controllers\\Auth\\VerificationController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/VerificationController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
         'App\\Http\\Controllers\\HomeController' => __DIR__ . '/../..' . '/app/Http/Controllers/HomeController.php',
+        'App\\Http\\Controllers\\SubscriptionController' => __DIR__ . '/../..' . '/app/Http/Controllers/SubscriptionController.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
         'App\\Http\\Middleware\\Authenticate' => __DIR__ . '/../..' . '/app/Http/Middleware/Authenticate.php',
         'App\\Http\\Middleware\\EncryptCookies' => __DIR__ . '/../..' . '/app/Http/Middleware/EncryptCookies.php',
@@ -2777,6 +2804,13 @@ class ComposerStaticInita65d34f3a8ea0796ee72a1bf459c0a59
         'Illuminate\\View\\ViewFinderInterface' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/View/ViewFinderInterface.php',
         'Illuminate\\View\\ViewName' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/View/ViewName.php',
         'Illuminate\\View\\ViewServiceProvider' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/View/ViewServiceProvider.php',
+        'Laracasts\\Flash\\Flash' => __DIR__ . '/..' . '/laracasts/flash/src/Laracasts/Flash/Flash.php',
+        'Laracasts\\Flash\\FlashNotifier' => __DIR__ . '/..' . '/laracasts/flash/src/Laracasts/Flash/FlashNotifier.php',
+        'Laracasts\\Flash\\FlashServiceProvider' => __DIR__ . '/..' . '/laracasts/flash/src/Laracasts/Flash/FlashServiceProvider.php',
+        'Laracasts\\Flash\\LaravelSessionStore' => __DIR__ . '/..' . '/laracasts/flash/src/Laracasts/Flash/LaravelSessionStore.php',
+        'Laracasts\\Flash\\Message' => __DIR__ . '/..' . '/laracasts/flash/src/Laracasts/Flash/Message.php',
+        'Laracasts\\Flash\\OverlayMessage' => __DIR__ . '/..' . '/laracasts/flash/src/Laracasts/Flash/OverlayMessage.php',
+        'Laracasts\\Flash\\SessionStore' => __DIR__ . '/..' . '/laracasts/flash/src/Laracasts/Flash/SessionStore.php',
         'Laravel\\Prompts\\Concerns\\Colors' => __DIR__ . '/..' . '/laravel/prompts/src/Concerns/Colors.php',
         'Laravel\\Prompts\\Concerns\\Cursor' => __DIR__ . '/..' . '/laravel/prompts/src/Concerns/Cursor.php',
         'Laravel\\Prompts\\Concerns\\Erase' => __DIR__ . '/..' . '/laravel/prompts/src/Concerns/Erase.php',
@@ -5673,6 +5707,37 @@ class ComposerStaticInita65d34f3a8ea0796ee72a1bf459c0a59
         'Spatie\\LaravelIgnition\\Support\\StringComparator' => __DIR__ . '/..' . '/spatie/laravel-ignition/src/Support/StringComparator.php',
         'Spatie\\LaravelIgnition\\Views\\BladeSourceMapCompiler' => __DIR__ . '/..' . '/spatie/laravel-ignition/src/Views/BladeSourceMapCompiler.php',
         'Spatie\\LaravelIgnition\\Views\\ViewExceptionMapper' => __DIR__ . '/..' . '/spatie/laravel-ignition/src/Views/ViewExceptionMapper.php',
+        'Spatie\\LaravelPackageTools\\Commands\\InstallCommand' => __DIR__ . '/..' . '/spatie/laravel-package-tools/src/Commands/InstallCommand.php',
+        'Spatie\\LaravelPackageTools\\Exceptions\\InvalidPackage' => __DIR__ . '/..' . '/spatie/laravel-package-tools/src/Exceptions/InvalidPackage.php',
+        'Spatie\\LaravelPackageTools\\Package' => __DIR__ . '/..' . '/spatie/laravel-package-tools/src/Package.php',
+        'Spatie\\LaravelPackageTools\\PackageServiceProvider' => __DIR__ . '/..' . '/spatie/laravel-package-tools/src/PackageServiceProvider.php',
+        'Spatie\\MailcoachSdk\\Actions\\ManagesCampaigns' => __DIR__ . '/..' . '/spatie/mailcoach-sdk-php/src/Actions/ManagesCampaigns.php',
+        'Spatie\\MailcoachSdk\\Actions\\ManagesEmailLists' => __DIR__ . '/..' . '/spatie/mailcoach-sdk-php/src/Actions/ManagesEmailLists.php',
+        'Spatie\\MailcoachSdk\\Actions\\ManagesSubscribers' => __DIR__ . '/..' . '/spatie/mailcoach-sdk-php/src/Actions/ManagesSubscribers.php',
+        'Spatie\\MailcoachSdk\\Exceptions\\ActionFailed' => __DIR__ . '/..' . '/spatie/mailcoach-sdk-php/src/Exceptions/ActionFailed.php',
+        'Spatie\\MailcoachSdk\\Exceptions\\InvalidData' => __DIR__ . '/..' . '/spatie/mailcoach-sdk-php/src/Exceptions/InvalidData.php',
+        'Spatie\\MailcoachSdk\\Exceptions\\ResourceNotFound' => __DIR__ . '/..' . '/spatie/mailcoach-sdk-php/src/Exceptions/ResourceNotFound.php',
+        'Spatie\\MailcoachSdk\\Exceptions\\Unauthorized' => __DIR__ . '/..' . '/spatie/mailcoach-sdk-php/src/Exceptions/Unauthorized.php',
+        'Spatie\\MailcoachSdk\\Mailcoach' => __DIR__ . '/..' . '/spatie/mailcoach-sdk-php/src/Mailcoach.php',
+        'Spatie\\MailcoachSdk\\MakesHttpRequests' => __DIR__ . '/..' . '/spatie/mailcoach-sdk-php/src/MakesHttpRequests.php',
+        'Spatie\\MailcoachSdk\\Resources\\ApiResource' => __DIR__ . '/..' . '/spatie/mailcoach-sdk-php/src/Resources/ApiResource.php',
+        'Spatie\\MailcoachSdk\\Resources\\Campaign' => __DIR__ . '/..' . '/spatie/mailcoach-sdk-php/src/Resources/Campaign.php',
+        'Spatie\\MailcoachSdk\\Resources\\CampaignBounce' => __DIR__ . '/..' . '/spatie/mailcoach-sdk-php/src/Resources/CampaignBounce.php',
+        'Spatie\\MailcoachSdk\\Resources\\CampaignClick' => __DIR__ . '/..' . '/spatie/mailcoach-sdk-php/src/Resources/CampaignClick.php',
+        'Spatie\\MailcoachSdk\\Resources\\CampaignOpen' => __DIR__ . '/..' . '/spatie/mailcoach-sdk-php/src/Resources/CampaignOpen.php',
+        'Spatie\\MailcoachSdk\\Resources\\CampaignUnsubscribe' => __DIR__ . '/..' . '/spatie/mailcoach-sdk-php/src/Resources/CampaignUnsubscribe.php',
+        'Spatie\\MailcoachSdk\\Resources\\EmailList' => __DIR__ . '/..' . '/spatie/mailcoach-sdk-php/src/Resources/EmailList.php',
+        'Spatie\\MailcoachSdk\\Resources\\Subscriber' => __DIR__ . '/..' . '/spatie/mailcoach-sdk-php/src/Resources/Subscriber.php',
+        'Spatie\\MailcoachSdk\\Support\\PaginatedResults' => __DIR__ . '/..' . '/spatie/mailcoach-sdk-php/src/Support/PaginatedResults.php',
+        'Spatie\\Newsletter\\Drivers\\Driver' => __DIR__ . '/..' . '/spatie/laravel-newsletter/src/Drivers/Driver.php',
+        'Spatie\\Newsletter\\Drivers\\MailChimpDriver' => __DIR__ . '/..' . '/spatie/laravel-newsletter/src/Drivers/MailChimpDriver.php',
+        'Spatie\\Newsletter\\Drivers\\MailcoachDriver' => __DIR__ . '/..' . '/spatie/laravel-newsletter/src/Drivers/MailcoachDriver.php',
+        'Spatie\\Newsletter\\Exceptions\\CouldNotUpdateMember' => __DIR__ . '/..' . '/spatie/laravel-newsletter/src/Exceptions/CouldNotUpdateMember.php',
+        'Spatie\\Newsletter\\Exceptions\\InvalidNewsletterList' => __DIR__ . '/..' . '/spatie/laravel-newsletter/src/Exceptions/InvalidNewsletterList.php',
+        'Spatie\\Newsletter\\Facades\\Newsletter' => __DIR__ . '/..' . '/spatie/laravel-newsletter/src/Facades/Newsletter.php',
+        'Spatie\\Newsletter\\NewsletterServiceProvider' => __DIR__ . '/..' . '/spatie/laravel-newsletter/src/NewsletterServiceProvider.php',
+        'Spatie\\Newsletter\\Support\\Lists' => __DIR__ . '/..' . '/spatie/laravel-newsletter/src/Support/Lists.php',
+        'Spatie\\Newsletter\\Support\\NewsletterList' => __DIR__ . '/..' . '/spatie/laravel-newsletter/src/Support/NewsletterList.php',
         'Stringable' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/Stringable.php',
         'Symfony\\Component\\Console\\Application' => __DIR__ . '/..' . '/symfony/console/Application.php',
         'Symfony\\Component\\Console\\Attribute\\AsCommand' => __DIR__ . '/..' . '/symfony/console/Attribute/AsCommand.php',
@@ -6685,6 +6750,7 @@ class ComposerStaticInita65d34f3a8ea0796ee72a1bf459c0a59
         return \Closure::bind(function () use ($loader) {
             $loader->prefixLengthsPsr4 = ComposerStaticInita65d34f3a8ea0796ee72a1bf459c0a59::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInita65d34f3a8ea0796ee72a1bf459c0a59::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInita65d34f3a8ea0796ee72a1bf459c0a59::$prefixesPsr0;
             $loader->classMap = ComposerStaticInita65d34f3a8ea0796ee72a1bf459c0a59::$classMap;
 
         }, null, ClassLoader::class);

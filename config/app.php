@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Facade;
 use Illuminate\Support\ServiceProvider;
+use Spatie\Newsletter\NewsletterServiceProvider;
 
 return [
 
@@ -159,6 +160,8 @@ return [
         /*
          * Package Service Providers...
          */
+        NewsletterServiceProvider::class,
+
 
         /*
          * Application Service Providers...

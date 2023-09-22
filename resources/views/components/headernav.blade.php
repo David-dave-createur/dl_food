@@ -5,11 +5,11 @@
         <div class="mx-auto pt-5 pt-lg-0 d-block d-lg-none d-xl-block">
           <p class="mb-0 fw-bold text-lg-center">Livraison àLivraison à: <i class="fas fa-map-marker-alt text-warning mx-2"></i><span class="fw-normal">l'emplacement actuel </span><span>Mirpur 1 Bus Stand, Dhaka</span></p>
         </div>
-        <form class="d-flex mt-4 mt-lg-0 ms-lg-auto ms-xl-0">
+        <form  class="d-flex mt-4 mt-lg-0 ms-lg-auto ms-xl-0">
           <div class="input-group-icon pe-2"><i class="fas fa-search input-box-icon text-primary"></i>
             <input class="form-control border-0 input-box bg-100" type="search" placeholder="Recherche de nourriture" aria-label="Search" />
           </div>
-          <button class="btn btn-white shadow-warning text-warning" type="submit"> <i class="fas fa-user me-2"></i>Connexion</button>
+          <a href="{{ route('login') }}" class="btn btn-white shadow-warning text-warning" ><i class="fas fa-user me-2"></i>Connexion</a>
         </form>
       </div>
     </div>
